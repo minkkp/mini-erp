@@ -8,7 +8,6 @@
 ## 기술 스택
 
 ### Backend
-- Java 17
 - Spring Boot
 - Spring Data JPA
 - PostgreSQL
@@ -33,7 +32,7 @@
 ### 재고 동시성 제어
 
 - Stock 엔티티에 Optimistic Lock(@Version) 적용
-- 동시 수정 시 충돌을 감지하고 즉시 실패 처리
+- 동시 요청 시 충돌을 감지하고 즉시 실패 처리
 - 자동 재시도 대신 사용자 재시도 유도 전략 선택
 
 ### 생산 처리 단일 트랜잭션
