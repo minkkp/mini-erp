@@ -7,13 +7,13 @@
 
 ## 기술 스택
 
-Backend
+### Backend
 - Java 17
 - Spring Boot
 - Spring Data JPA
 - PostgreSQL
 
-Frontend (보조)
+### Frontend (보조)
 - React
 - TypeScript  
 백엔드 API 검증 목적
