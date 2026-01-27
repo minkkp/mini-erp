@@ -63,7 +63,6 @@ Spring Boot + JPA 기반으로 해결하는 미니 프로젝트입니다.
 
 - ProductionMaterial  
   생산 시 투입된 자재 정보
-  
 <br><br>
 
 ## 🔄 생산 처리 흐름
