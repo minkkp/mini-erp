@@ -98,10 +98,9 @@ Spring Boot + JPA 기반으로 해결하는 미니 프로젝트입니다.
 데이터 규모가 커져도 재고 데이터를 나눠 조회하며 생성할 수 있도록 구성했습니다.
 
 <br><br>
-  
-## 🗂 ERD
-<img width="1359" height="901" alt="image" src="https://github.com/user-attachments/assets/163e6cf0-fea8-4b08-8ebf-e714e3b97aaf" />
 
+## 🗂 ERD
+<img width="901" height="1368" alt="erp" src="https://github.com/user-attachments/assets/c2e780d7-ab56-4469-bb2d-378420e677a1" />
 
 - 재고는 현재 상태와 변경 이력을 분리하여 관리
 - 생산 처리 시 자재 차감과 완제품 증가 흐름을 명확히 표현
@@ -118,11 +117,14 @@ Spring Boot + JPA 기반으로 해결하는 미니 프로젝트입니다.
 - 생산, 입고, 재고 흐름을 화면에서 직접 확인 가능
   
 ### 자재 입고
-<img width="1080" height="577" alt="image" src="https://github.com/user-attachments/assets/51e3275e-3a58-4d37-adf4-9130cd928f07" />
+
+<img width="1093" height="596" alt="image" src="https://github.com/user-attachments/assets/f23a5499-4b39-4144-a14c-3f29b07f93f3" />
 ### 생산 실적 등록
-<img width="1347" height="736" alt="image" src="https://github.com/user-attachments/assets/f0fe229e-fab6-4f5d-9e8e-6758f7e6fb68" />
+
+<img width="1365" height="738" alt="image" src="https://github.com/user-attachments/assets/e5808621-795b-4b4f-925b-81a666ca0ee6" />
 ### 재고 조회
-<img width="1203" height="352" alt="image" src="https://github.com/user-attachments/assets/9ea196f0-8fad-41d2-b13b-4ec2237a8908" />
+
+<img width="1238" height="384" alt="image" src="https://github.com/user-attachments/assets/fee359dd-5bfa-4950-9099-f42901545798" />
 <br><br>
 
 ## ✍ 마무리
