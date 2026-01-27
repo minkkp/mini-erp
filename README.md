@@ -102,27 +102,25 @@ Spring Boot + JPA 기반으로 해결하는 미니 프로젝트입니다.
 <img width="979" height="716" alt="image" src="https://github.com/user-attachments/assets/51a9f153-8c66-4029-95f0-fd241577ef82" />
 
 - 재고는 현재 상태와 변경 이력을 분리하여 관리
-- 생산 실적과 자재 투입 테이블을 분리
+- 생산 실적과 자재 투입 정보 테이블을 분리
 - 일 단위 재고 집계를 위해 StockDailySnapshot 테이블 구성
 <br><br>
 
 ## 🧪 프론트엔드 구성 (보조)
 
-백엔드 API 흐름과 업무 시나리오 검증을 목적으로 구현했습니다.
+API 및 시나리오 검증을 목적으로 구현했습니다.
 
 - React + TypeScript 기반
 - API 레이어 분리
 - DTO 기준 타입 정의로 데이터 구조 일관성 유지
-- 생산, 입고, 재고 흐름을 화면에서 직접 확인 가능
   
 ### 자재 입고
-
+</br>
 <img width="1093" height="596" alt="image" src="https://github.com/user-attachments/assets/f23a5499-4b39-4144-a14c-3f29b07f93f3" />
 ### 생산 실적 등록
-
+</br>
 <img width="1365" height="738" alt="image" src="https://github.com/user-attachments/assets/e5808621-795b-4b4f-925b-81a666ca0ee6" />
 ### 재고 조회
-
 <img width="1238" height="384" alt="image" src="https://github.com/user-attachments/assets/fee359dd-5bfa-4950-9099-f42901545798" />
 <br><br>
 
