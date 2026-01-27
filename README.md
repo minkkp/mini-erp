@@ -117,8 +117,7 @@ Spring Boot + JPA 기반으로 해결하는 미니 프로젝트입니다.
 - 생산, 입고, 재고 흐름을 화면에서 직접 확인 가능
   
 ### 자재 입고
-
-<img width="1093" height="596" alt="image" src="https://github.com/user-attachments/assets/f23a5499-4b39-4144-a14c-3f29b07f93f3" />
+![image](https://github.com/user-attachments/assets/f23a5499-4b39-4144-a14c-3f29b07f93f3")
 ### 생산 실적 등록
 
 <img width="1365" height="738" alt="image" src="https://github.com/user-attachments/assets/e5808621-795b-4b4f-925b-81a666ca0ee6" />
