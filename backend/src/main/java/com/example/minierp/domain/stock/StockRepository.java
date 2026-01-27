@@ -21,4 +21,7 @@ public interface StockRepository extends JpaRepository<Stock, Long> {
     where s.item = :item
     """)
     int sumQuantityByItem(@Param("item") Item item);
+
+    List<Stock> findTop1000ByIdGreaterThanOrderById(Long lastId);
+
 }

@@ -32,26 +32,39 @@ public class StockDailySnapshotService {
     @Transactional
     public void createDailySnapshot(LocalDate date) {
 
-        List<Stock> stocks = stockRepository.findAll();
+        Long lastId = 0L;
 
-        for (Stock stock : stocks) {
-            snapshotRepository
-                    .findByItemIdAndWarehouseIdAndSnapshotDate(
-                            stock.getItem().getId(),
-                            stock.getWarehouse().getId(),
-                            date
-                    )
-                    .ifPresentOrElse(
-                            snapshot -> snapshot.updateQuantity(stock.getQuantity()),
-                            () -> snapshotRepository.save(
-                                    new StockDailySnapshot(
-                                            stock.getItem().getId(),
-                                            stock.getWarehouse().getId(),
-                                            stock.getQuantity(),
-                                            date
-                                    )
-                            )
-                    );
+        while (true) {
+
+            List<Stock> stocks =
+                    stockRepository.findTop1000ByIdGreaterThanOrderById(lastId);
+
+            if (stocks.isEmpty()) {
+                break;
+            }
+
+            for (Stock stock : stocks) {
+
+                snapshotRepository
+                        .findByItemIdAndWarehouseIdAndSnapshotDate(
+                                stock.getItem().getId(),
+                                stock.getWarehouse().getId(),
+                                date
+                        )
+                        .ifPresentOrElse(
+                                snapshot -> snapshot.updateQuantity(stock.getQuantity()),
+                                () -> snapshotRepository.save(
+                                        new StockDailySnapshot(
+                                                stock.getItem().getId(),
+                                                stock.getWarehouse().getId(),
+                                                stock.getQuantity(),
+                                                date
+                                        )
+                                )
+                        );
+
+                lastId = stock.getId();
+            }
         }
     }
 }
