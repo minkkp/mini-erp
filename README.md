@@ -100,7 +100,7 @@ Spring Boot + JPA 기반으로 해결하는 미니 프로젝트입니다.
 <br><br>
 
 ## 🗂 ERD
-<img width="800" height="600" alt="erp" src="https://github.com/user-attachments/assets/c2e780d7-ab56-4469-bb2d-378420e677a1" />
+<img width="531" height="829" alt="image" src="https://github.com/user-attachments/assets/9e409bb5-789c-47c1-9f30-1bcb5acb5cdc" />
 
 - 재고는 현재 상태와 변경 이력을 분리하여 관리
 - 생산 처리 시 자재 차감과 완제품 증가 흐름을 명확히 표현
