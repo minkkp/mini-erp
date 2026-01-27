@@ -90,27 +90,18 @@ Spring Boot + JPA 기반으로 해결하는 미니 프로젝트입니다.
 ## 📊 재고 스냅샷 배치 처리
 
 - 일 단위 재고 집계를 위한 스냅샷 테이블을 운영
-- 배치 실행 시 특정 시점의 전체 재고 상태를 기준으로 스냅샷 생성
+- 배치 실행 시점의 전체 재고 상태를 기준으로 스냅샷 생성
 - (item_id, warehouse_id, snapshot_date) 유니크 제약을 적용하여  
   동일 날짜에 여러 번 실행해도 결과가 동일하도록 설계
 
 스냅샷 생성 배치는 PK 기반 페이징 방식으로 구현하여  
-대용량 데이터 환경에서도 메모리 사용량을 제한하고  
-안정적으로 확장할 수 있도록 구성했습니다.
+데이터 규모가 커져도 재고 데이터를 나눠 조회하며 생성할 수 있도록 구성했습니다.
+
 <br><br>
-
-## 🖥 주요 화면
-
-### 생산 실적 등록
-(이미지)
-
-### 자재 입고 및 재고 조회
-(이미지)
-
   
 ## 🗂 ERD
+<img width="1359" height="901" alt="image" src="https://github.com/user-attachments/assets/163e6cf0-fea8-4b08-8ebf-e714e3b97aaf" />
 
-(이미지)
 
 - 재고는 현재 상태와 변경 이력을 분리하여 관리
 - 생산 처리 시 자재 차감과 완제품 증가 흐름을 명확히 표현
@@ -125,6 +116,13 @@ Spring Boot + JPA 기반으로 해결하는 미니 프로젝트입니다.
 - API 레이어 분리
 - DTO 기준 타입 정의로 데이터 구조 일관성 유지
 - 생산, 입고, 재고 흐름을 화면에서 직접 확인 가능
+  
+### 자재 입고
+<img width="1080" height="577" alt="image" src="https://github.com/user-attachments/assets/51e3275e-3a58-4d37-adf4-9130cd928f07" />
+### 생산 실적 등록
+<img width="1347" height="736" alt="image" src="https://github.com/user-attachments/assets/f0fe229e-fab6-4f5d-9e8e-6758f7e6fb68" />
+### 재고 조회
+<img width="1203" height="352" alt="image" src="https://github.com/user-attachments/assets/9ea196f0-8fad-41d2-b13b-4ec2237a8908" />
 <br><br>
 
 ## ✍ 마무리
