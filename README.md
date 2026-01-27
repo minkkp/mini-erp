@@ -121,6 +121,7 @@ API 및 시나리오 검증을 목적으로 구현했습니다.
 </br>
 <img width="1365" height="738" alt="image" src="https://github.com/user-attachments/assets/e5808621-795b-4b4f-925b-81a666ca0ee6" />
 ### 재고 조회
+</br>
 <img width="1238" height="384" alt="image" src="https://github.com/user-attachments/assets/fee359dd-5bfa-4950-9099-f42901545798" />
 <br><br>
 
