@@ -100,10 +100,10 @@ Spring Boot + JPA 기반으로 해결하는 미니 프로젝트입니다.
 <br><br>
 
 ## 🗂 ERD
-<img width="531" height="829" alt="image" src="https://github.com/user-attachments/assets/9e409bb5-789c-47c1-9f30-1bcb5acb5cdc" />
+<img width="979" height="716" alt="image" src="https://github.com/user-attachments/assets/51a9f153-8c66-4029-95f0-fd241577ef82" />
 
 - 재고는 현재 상태와 변경 이력을 분리하여 관리
-- 생산 처리 시 자재 차감과 완제품 증가 흐름을 명확히 표현
+- 생산 실적과 자재 투입 테이블을 분리
 - 일 단위 재고 집계를 위해 StockDailySnapshot 테이블 구성
 <br><br>
 
