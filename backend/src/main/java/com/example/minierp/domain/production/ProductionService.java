@@ -69,7 +69,7 @@ public class ProductionService {
 
         Production production = createProduction(request, productItem, warehouse);
 
-        consumeMaterials(production, request.getMaterials());
+        consumeMaterials(production, request.getMaterials(),true); // test용 --- 비관적 true, 낙관적 false
 
         increaseProductStock(production, productItem, warehouse, request);
 
@@ -94,11 +94,15 @@ public class ProductionService {
 
     private void consumeMaterials(
             Production production,
-            List<ProductionMaterialRequest> materials
+            List<ProductionMaterialRequest> materials,
+            boolean pessimistic
     ) {
         for (ProductionMaterialRequest m : materials) {
 
-            Stock stock = stockRepository.findById(m.getStockId())
+            Stock stock = pessimistic
+                    ? stockRepository.findByIdWithPessimisticLock(m.getStockId())
+                    .orElseThrow(() -> new BusinessException("자재 재고 없음"))
+                    : stockRepository.findById(m.getStockId())
                     .orElseThrow(() -> new BusinessException("자재 재고 없음"));
 
             stock.decrease(m.getQuantity());

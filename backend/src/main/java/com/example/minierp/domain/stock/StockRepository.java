@@ -3,7 +3,9 @@ package com.example.minierp.domain.stock;
 import com.example.minierp.domain.item.Item;
 import com.example.minierp.domain.item.ItemType;
 import com.example.minierp.domain.warehouse.Warehouse;
+import jakarta.persistence.LockModeType;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Lock;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
@@ -23,5 +25,9 @@ public interface StockRepository extends JpaRepository<Stock, Long> {
     int sumQuantityByItem(@Param("item") Item item);
 
     List<Stock> findTop1000ByIdGreaterThanOrderById(Long lastId);
+
+    @Lock(LockModeType.PESSIMISTIC_WRITE)
+    @Query("select s from Stock s where s.id = :id")
+    Optional<Stock> findByIdWithPessimisticLock(@Param("id") Long id);
 
 }
